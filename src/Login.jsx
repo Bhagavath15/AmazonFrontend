@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useFormik } from "formik";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { useNavigate, useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,7 +10,7 @@ import CardContent from '@mui/material/CardContent';
 export function Login() {
     const navigate = useNavigate();
     const [formstate, setformstate] = useState("success");
-    const history = useHistory()
+    // const history = useHistory()
     const formik = useFormik({
         initialValues: {
             username: '',
@@ -34,8 +34,8 @@ export function Login() {
                 const result = await data.json();
                 console.log("success", result);
                 localStorage.setItem("token", result.token);
-                history.push("/dashboard");
-                // navigate("/dashboard");
+                // history.push("/dashboard");
+                navigate("/dashboard");
             }
 
         }

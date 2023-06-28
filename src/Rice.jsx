@@ -157,7 +157,7 @@ function DalList({ dal, id }) {
         <div className="mangolist" >
             <img src={dal.img} alt={dal.title} />
             <p className="mango-title" onClick={() => navigate(`/dal/${dal.id}`)}>{dal.title} </p>
-            <span className="mango-rate">{dal.rate}</span>
+            <span className="mango-rate">₹ {dal.rate}</span>
             <span className="strike">{dal.strike}</span>
             <p className="offer">{dal.off}</p>
         </div>
@@ -520,7 +520,7 @@ function RiceList({ rice, id }) {
         <div className="mangolist" >
             <img src={rice.img} alt={rice.title} />
             <p className="mango-title" onClick={() => navigate(`/rice/${rice.id}`)}>{rice.title} </p>
-            <span className="mango-rate">{rice.rate}</span>
+            <span className="mango-rate">₹ {rice.rate}</span>
             <span className="strike">{rice.strike}</span>
             <p className="offer">{rice.off}</p>
         </div>
@@ -883,7 +883,7 @@ function AttaList({ atta, id }) {
         <div className="mangolist" >
             <img src={atta.img} alt={atta.title} />
             <p className="mango-title" onClick={() => navigate(`/atta/${atta.id}`)}>{atta.title} </p>
-            <span className="mango-rate">{atta.rate}</span>
+            <span className="mango-rate">₹ {atta.rate}</span>
             <span className="strike">{atta.strike}</span>
             <p className="offer">{atta.off}</p>
         </div>

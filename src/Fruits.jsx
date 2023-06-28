@@ -157,7 +157,7 @@ function MangoList({ mango, id }) {
         <div className="mangolist" >
             <img src={mango.img} alt={mango.title} />
             <p className="mango-title" onClick={() => navigate(`/fruits/${mango.id}`)}>{mango.title} </p>
-            <span className="mango-rate">{mango.rate}</span>
+            <span className="mango-rate">₹ {mango.rate}</span>
             <span className="strike">{mango.strike}</span>
             <p className="offer">{mango.off}</p>
         </div>
@@ -495,7 +495,7 @@ function VegetableList({ vegetable, id }) {
         <div className="mangolist" >
             <img src={vegetable.img} alt={vegetable.title} />
             <p className="mango-title" onClick={() => navigate(`/vegetables/${vegetable.id}`)}>{vegetable.title} </p>
-            <span className="mango-rate">{vegetable.rate}</span>
+            <span className="mango-rate">₹ {vegetable.rate}</span>
             <span className="strike">{vegetable.strike}</span>
             <p className="offer">{vegetable.off}</p>
         </div>

@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Button from '@mui/material/Button';
 import PersonSharpIcon from '@mui/icons-material/PersonSharp';
-import { Routes, Route, useNavigate, useHistory } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { Fruits, Fruit, Vegetable } from './Fruits';
 import { Rice, RiceCont, DalCont, AttaCont } from './Rice';
 import { Oil, OilCont, MasalaCont, SauceCont } from './Oil';
@@ -61,7 +61,7 @@ export default function App() {
         <Route path="/fish/:id" element={<ProtectedRoute><FishCont /></ProtectedRoute>} />
         <Route path="/chicken/:id" element={<ProtectedRoute><ChickenCont /></ProtectedRoute>} />
         <Route path="/mutton/:id" element={<ProtectedRoute><MuttonCont /></ProtectedRoute>} />
-        <Route path="/household" element={<ProtectedRoute><Household /></ProtectedRoute>} />
+        {/* <Route path="/household" element={<ProtectedRoute><Household /></ProtectedRoute>} /> */}
         <Route path="/tea" element={<ProtectedRoute><Tea tea={tea} setTea={setTea} coffee={coffee} setCoffee={setCoffee} /></ProtectedRoute>} />
         <Route path="/tea/:id" element={<ProtectedRoute><TeaCont /></ProtectedRoute>} />
         <Route path="/coffee/:id" element={<ProtectedRoute><CoffeeCont /></ProtectedRoute>} />
@@ -87,17 +87,17 @@ function ProtectedRoute({ children }) {
 
 function Navbar() {
   const navigate = useNavigate()
-  const [logout, setLogout] = useState(false)
-  const history = useHistory()
+  // const [logout, setLogout] = useState(false)
+  // const history = useHistory()
 
-  useEffect(() => {
-    if (!localStorage.getItem("token"))
-      history.push("/login")
-  }, [logout])
+  // useEffect(() => {
+  //   if (!localStorage.getItem("token"))
+  //     history.push("/login")
+  // }, [logout])
 
   const handleClick = () => {
     localStorage.removeItem('token');
-    setLogout(true)
+    // setLogout(true)
     console.log("logout")
   }
   return (
