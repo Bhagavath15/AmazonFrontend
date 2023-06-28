@@ -99,6 +99,7 @@ function Navbar() {
     localStorage.removeItem('token');
     // setLogout(true)
     console.log("logout")
+    navigate("/login")
   }
   return (
     <div className="navbar">
