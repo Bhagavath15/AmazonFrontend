@@ -53,7 +53,7 @@ export function Login() {
                                 type="email"
                                 value={formik.values.username}
                                 onChange={formik.handleChange}
-                                label="Username"
+                                label="Email"
                                 variant="outlined" />
                             <TextField
                                 value={formik.values.password}
@@ -150,7 +150,7 @@ export function Signin() {
                                     value={formik.values.username}
                                     onBlur={formik.handleBlur}
                                     onChange={formik.handleChange}
-                                    label="Username"
+                                    label="Email"
                                     variant="outlined" required />
                             </div>
                             <div className="login-text">
