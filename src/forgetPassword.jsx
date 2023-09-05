@@ -48,7 +48,8 @@ export function ForgetPassword() {
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
                             label="Email"
-                            variant="outlined" />
+                            type="email"
+                            variant="outlined" required />
 
                         <Button color="success" type='submit' variant="contained">submit</Button>
 
