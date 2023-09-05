@@ -296,7 +296,7 @@ body {
   justify-content: center
 }
 
-.buy :hover {
+.buy:hover {
   cursor: pointer
 }
 
