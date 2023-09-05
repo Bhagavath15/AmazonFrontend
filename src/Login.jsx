@@ -50,6 +50,7 @@ export function Login() {
                         <div className='loginfield'>
                             <TextField
                                 name='username'
+                                type="email"
                                 value={formik.values.username}
                                 onChange={formik.handleChange}
                                 label="Username"
@@ -127,7 +128,7 @@ export function Signin() {
                                     onBlur={formik.handleBlur}
                                     onChange={formik.handleChange}
                                     label="Firstname"
-                                    variant="outlined" />
+                                    variant="outlined" required />
                             </div>
                             <div className="login-text">
                                 <label>Last Name : </label>
@@ -138,18 +139,19 @@ export function Signin() {
                                     onBlur={formik.handleBlur}
                                     onChange={formik.handleChange}
                                     label="Lastname"
-                                    variant="outlined" />
+                                    variant="outlined" required />
                             </div>
                             <div className="login-text">
                                 <label> Email : </label>
                                 <TextField
+                                    type="email"
                                     placeholder="username"
                                     name='username'
                                     value={formik.values.username}
                                     onBlur={formik.handleBlur}
                                     onChange={formik.handleChange}
                                     label="Username"
-                                    variant="outlined" />
+                                    variant="outlined" required />
                             </div>
                             <div className="login-text">
                                 <label>Password : </label>
@@ -161,7 +163,7 @@ export function Signin() {
                                     label="Password"
                                     name="password"
                                     type="password"
-                                    variant="outlined" />
+                                    variant="outlined" required />
                             </div>
                             <div className="login-text">
                                 <label>Phone Number : </label>
@@ -173,7 +175,7 @@ export function Signin() {
                                     label="Phone Number"
                                     name="phoneNo"
                                     type="text"
-                                    variant="outlined" />
+                                    variant="outlined" required />
                             </div>
                         </div>
 
